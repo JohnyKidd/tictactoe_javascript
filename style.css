@@ -1,7 +1,17 @@
+@font-face {
+    font-family: 'tiquetregular';
+    src: url('fonts/tiquet__-webfont.woff2') format('woff2'),
+         url('fonts/tiquet__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .flexDiv{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000;
 }
 .gridField{
   display: grid;
@@ -10,9 +20,19 @@
   background-color: #03A062;
 }
 .field{
-  border: 0.5em groove #043600;
+  border: 0.1em ridge #043600;
+  border-radius: 5% 10%;
 }
 #gameTitle{
   font-size: 5em;
-  font-family: monospace;
+  color: #0dff00;
+  font-family: tiquetregular;
+  margin: 0;
+}
+#description{
+  font-family: tiquetregular;
+  color: #0dff00;
+  font-size: 2em;
+  margin-top:0;
+  margin-bottom: 1em;
 }

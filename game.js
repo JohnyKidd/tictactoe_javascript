@@ -9,11 +9,16 @@ for (let i = 0; i < 9; i++){
   map.appendChild(field);
 }
 
-//add the mouse events to the playfield
+//add the mouse events and style attributes to the playfield
 const playArea = document.querySelectorAll(".field");
 
-//hover
+//hover event and style
 for (let i=0;i<9;i++){
+  playArea[i].style["color"]="#0dff00";
+  playArea[i].style["font-size"]="5em";
+  playArea[i].style["text-align"]="center";
+  playArea[i].style["font-family"]="tiquetregular";
+
   playArea[i].addEventListener("mouseover",function(e){
     playArea[i].style["background-color"]="#000";
   });
@@ -22,4 +27,9 @@ for (let i=0;i<9;i++){
   playArea[i].addEventListener("mouseout",function(e){
     playArea[i].style["background-color"]="#03A062";
   });
-}
+
+  //click
+  playArea[i].addEventListener("click",function(e){
+    playArea[i].innerHTML="X";
+  });
+}//end of event adder loop
